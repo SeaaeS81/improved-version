@@ -5,75 +5,105 @@
 
 // 1. Напишіть цикл, який виводить всі парні числа від 20 до 32.
 
-console.log('------------for-----------');
+// console.log('------------for-----------');
 
-let arr = [20,21,22,23,24,25,26,27,28,29,30,31,32];
+// let arr = [20,21,22,23,24,25,26,27,28,29,30,31,32];// масив
 
 
-for ( let i = 0; i < arr.length; i ++) {    // for класическая итерация 
-    if (arr[i]% 2 === 0) {
-        console.log(arr[i]);
+// for ( let i = 0; i < arr.length; i ++) {    // for класическая итерация 
+//     if (arr[i]% 2 === 0) {
+//         console.log(arr[i]);
 
-    }
+//     }
    
- };
-console.log('--for- of--------');
+//  };
+// console.log('--for- of--------');
 
-for (let el of arr) {   
-    if(el % 2 === 0) {
-        console.log(el);
+// for (let el of arr) {   
+//     if(el % 2 === 0) {
+//         console.log(el);
 
-    }                 // for of цикл  только для итерации масивов          
+//     }                 // for of цикл  только для итерации масивов          
     
-  };
-  console.log('--for-in--------');
+//   };
+//   console.log('--for-in--------');
 
-  for (let el in arr) {   
-    if(el % 2 === 0) {                      // for in цикл   для масивов по индексу и обьектов по ключу
-    console.log(arr[el]);
-}
-  }
-  console.log('--while--------');
+//   for (let el in arr) {   
+//     if(el % 2 === 0) {                      // for in цикл   для масивов по индексу и обьектов по ключу
+//     console.log(arr[el]);
+// }
+//   }
+//   console.log('--while--------');
 
-  let i = 0;                                    // while цикл
+//   let i = 0;                                    // while цикл
 
- while (i < arr.length) { 
+//  while (i < arr.length) { 
 
-    if(arr[i] % 2 === 0) {
+//     if(arr[i] % 2 === 0) {
 
-        console.log(arr[i]);
+//         console.log(arr[i]);
 
-    }
+//     }
   
-   i++;
- };
- console.log('--do--while--------');
+//    i++;
+//  };
+//  console.log('--do--while--------');
 
- let ind = 0;                             // do while цикл послеумовный цикл
+//  let ind = 0;                             // do while цикл послеумовный цикл
 
- do {  
+//  do {  
     
-        if(arr[i] % 2 === 0) {
+//         if(arr[i] % 2 === 0) {
 
-            console.log(arr[ind]);
+//             console.log(arr[ind]);
 
-        }
+//         }
      
-  ind++; 
+//   ind++; 
 
- } while (ind < arr.length);
+//  } while (ind < arr.length);
 
 
 
 // 2. Створіть масив зі списком:
-
 //    вашого улюбленого фрукту,
 //    вашого улюбленого кольору,
 //    ім'я,
 //    рандомного числа,
 //    вашого віку.
 
-//    Виведіть цей проітерований масив на консоль і визначте його тип даних.
+let ar = ["apfel", "blua", "Yevhen", 777, 43];
+
+for (let i = 0; i < ar.length; i++) {                   // for тип данных
+    console.log(ar[i],typeof ar[i]);
+}
+console.log('------------------------')
+//    Виведіть цей проітерований масив на консоль і визначте його тип даних.на 5 циклах: for, for of, for in, while, do while
+
+for (let i of ar) {
+    console.log(i,typeof i);                         //// for of тип данных
+}
+console.log('------------------------')
+
+for (let index in ar) {                               // for in тип данных
+    console.log(ar[index], typeof [index]);
+}
+console.log('------------------------')
+
+let is = 0;
+while (is < ar.length) {
+    console.log(ar[is], typeof ar[is]);           // while тип данных
+    is++;
+}
+console.log('------------------------')
+
+im = 0;
+do {
+    console.log(ar[im], typeof ar[im]);          //do while тип данных
+    im++;
+} while (im < ar.length);
+
+
 
 // 3. Напишіть цикл який виводить всі непарні числа від 17 до 39.
 
